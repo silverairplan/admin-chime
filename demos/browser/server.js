@@ -19,6 +19,13 @@ console.info('Using index path', indexPagePath);
 
 const indexPage = fs.readFileSync(indexPagePath);
 
+const config = {
+  accessKeyId: 'AKIAVT6E6MQNI634ZUWS',
+  accessSecretKey: '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',
+  region: 'us-east-1'
+}
+
+AWS.config.update(config);
 // Create ans AWS SDK Chime object. Region 'us-east-1' is currently required.
 // Use the MediaRegion property below in CreateMeeting to select the region
 // the meeting is hosted in.
